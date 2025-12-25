@@ -1,68 +1,171 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zoan • Merry Christmas 2025</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Snowfall Background -->
-    <div class="snowfall">
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-    </div>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <div class="container">
-        <!-- Banner -->
-        <div class="banner">
-            <img src="images/ZoanBanner.png" alt="Zoan Banner" class="banner-img">
-        </div>
+body {
+    background: linear-gradient(135deg, #0a001f, #1a0033, #0f0c29);
+    color: #e0e0e0;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    line-height: 1.8;
+    overflow-x: hidden;
+    position: relative;
+}
 
-        <!-- Profile Picture -->
-        <div class="pfp-container">
-            <img src="images/ZoanPfp.png" alt="Zoan Profile" class="pfp">
-        </div>
+/* Animated Snowfall */
+.snowfall {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
 
-        <!-- Main Content -->
-        <div class="content">
-            <h1>🎄❤️ Merry Christmas from the Zoan Team!</h1>
-            
-            <div class="message">
-                <p>Dear amazing Zoan family,</p>
-                
-                <p>→ To everyone celebrating today — <strong>Merry Christmas!</strong> 🎅✨<br>
-                May your day be filled with warmth, laughter, and good food.</p>
-                
-                <p>→ To those who don’t celebrate Christmas — happy holidays and season’s greetings! ❄️<br>
-                No matter how you spend this time, we hope it’s full of peace, joy, and people (or pets) you love.</p>
-                
-                <p>→ A heartfelt <strong>thank you</strong> to every single one of you for being part of this server.<br>
-                From the daily grinders to the late-night chatters, the carriers helping new players, and everyone in between — <strong>you</strong> are what makes Zoan feel like home. This year has been incredible because of <em>you</em>.</p>
-                
-                <p>→ The bot will now be going offline for Christmas. We’re taking a short break to recharge, but trust us — we’re already excited for what’s coming in 2026.</p>
-                
-                <p>Rest well, enjoy the holidays, and get ready… the adventure continues soon! 🏴‍☠️</p>
-                
-                <p class="sign-off">With all our love and gratitude,<br>
-                <strong>— The Zoan Team</strong> 🎁❤️</p>
-            </div>
+.snowflake {
+    position: absolute;
+    color: #ffffff;
+    font-size: 1.2em;
+    opacity: 0.9;
+    user-select: none;
+    animation: fall linear infinite;
+}
 
-            <div class="footer-note">
-                <p>Happy Holidays from our crew to yours! 🌟</p>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+.snowflake:nth-child(1) { left: 10%; font-size: 1.4em; animation-duration: 12s; animation-delay: 0s; }
+.snowflake:nth-child(2) { left: 20%; font-size: 1em; animation-duration: 15s; animation-delay: 2s; }
+.snowflake:nth-child(3) { left: 30%; font-size: 1.6em; animation-duration: 18s; animation-delay: 4s; }
+.snowflake:nth-child(4) { left: 40%; font-size: 1.1em; animation-duration: 14s; animation-delay: 1s; }
+.snowflake:nth-child(5) { left: 50%; font-size: 1.5em; animation-duration: 20s; animation-delay: 6s; }
+.snowflake:nth-child(6) { left: 60%; font-size: 0.9em; animation-duration: 16s; animation-delay: 3s; }
+.snowflake:nth-child(7) { left: 70%; font-size: 1.3em; animation-duration: 13s; animation-delay: 8s; }
+.snowflake:nth-child(8) { left: 80%; font-size: 1.2em; animation-duration: 17s; animation-delay: 5s; }
+.snowflake:nth-child(9) { left: 90%; font-size: 1em; animation-duration: 19s; animation-delay: 7s; }
+.snowflake:nth-child(10) { left: 15%; font-size: 1.4em; animation-duration: 14s; animation-delay: 9s; }
+.snowflake:nth-child(11) { left: 45%; font-size: 1.1em; animation-duration: 18s; animation-delay: 10s; }
+.snowflake:nth-child(12) { left: 75%; font-size: 1.5em; animation-duration: 15s; animation-delay: 11s; }
+
+@keyframes fall {
+    0% { transform: translateY(-100vh) rotate(0deg); opacity: 0.8; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0.3; }
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.banner {
+    margin-bottom: -80px;
+    position: relative;
+    z-index: 2;
+}
+
+.banner-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7);
+    border: 3px solid rgba(255, 255, 255, 0.15);
+}
+
+.pfp-container {
+    margin: -90px auto 40px;
+    width: 170px;
+    height: 170px;
+    position: relative;
+    z-index: 3;
+}
+
+.pfp {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 10px solid #1a0033;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 255, 255, 0.15);
+    object-fit: cover;
+}
+
+.content {
+    background: rgba(15, 12, 40, 0.92);
+    padding: 60px 45px;
+    border-radius: 22px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    margin-top: 20px;
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    margin-bottom: 35px;
+    background: linear-gradient(to right, #ff6b6b, #ffd93d, #a8e6cf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.message p {
+    font-size: 1.2rem;
+    margin: 24px 0;
+    text-align: left;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.message strong {
+    color: #ff9a9e;
+}
+
+.message em {
+    color: #a8e6cf;
+    font-style: italic;
+}
+
+.sign-off {
+    margin-top: 50px;
+    font-size: 1.4rem;
+    text-align: right;
+    color: #ff6b6b;
+    text-shadow: 0 2px 8px rgba(255, 107, 107, 0.4);
+}
+
+.footer-note {
+    margin-top: 60px;
+    font-size: 1.15rem;
+    color: #b0c4de;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.3rem;
+    }
+    .content {
+        padding: 45px 30px;
+    }
+    .message p {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    .sign-off {
+        text-align: center;
+        font-size: 1.3rem;
+    }
+    .pfp-container {
+        width: 140px;
+        height: 140px;
+    }
+    .banner-img {
+        border-radius: 14px;
+    }
+}
