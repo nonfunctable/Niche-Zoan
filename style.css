@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #e0e0e0;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.banner {
+    margin-bottom: -80px;
+    position: relative;
+    z-index: 1;
+}
+
+.banner-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.pfp-container {
+    margin: -80px auto 40px;
+    width: 160px;
+    height: 160px;
+    position: relative;
+    z-index: 2;
+}
+
+.pfp {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 8px solid #24243e;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+    object-fit: cover;
+}
+
+.content {
+    background: rgba(20, 20, 40, 0.85);
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.message p {
+    font-size: 1.15rem;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.message strong {
+    color: #ff6b6b;
+}
+
+.message em {
+    color: #a8e6cf;
+}
+
+.sign-off {
+    margin-top: 40px;
+    font-size: 1.3rem;
+    text-align: right;
+    color: #ff9a9e;
+}
+
+.footer-note {
+    margin-top: 50px;
+    font-size: 1.1rem;
+    color: #b0c4de;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .content {
+        padding: 40px 25px;
+    }
+    
+    .message p {
+        font-size: 1.05rem;
+        text-align: center;
+    }
+    
+    .sign-off {
+        text-align: center;
+    }
+    
+    .pfp-container {
+        width: 130px;
+        height: 130px;
+    }
+}
