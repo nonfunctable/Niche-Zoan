@@ -1,123 +1,68 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoan • Merry Christmas 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Snowfall Background -->
+    <div class="snowfall">
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+    </div>
 
-body {
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    color: #e0e0e0;
-    font-family: 'Montserrat', sans-serif;
-    min-height: 100vh;
-    line-height: 1.7;
-}
+    <div class="container">
+        <!-- Banner -->
+        <div class="banner">
+            <img src="images/ZoanBanner.png" alt="Zoan Banner" class="banner-img">
+        </div>
 
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px;
-}
+        <!-- Profile Picture -->
+        <div class="pfp-container">
+            <img src="images/ZoanPfp.png" alt="Zoan Profile" class="pfp">
+        </div>
 
-.banner {
-    margin-bottom: -80px;
-    position: relative;
-    z-index: 1;
-}
+        <!-- Main Content -->
+        <div class="content">
+            <h1>🎄❤️ Merry Christmas from the Zoan Team!</h1>
+            
+            <div class="message">
+                <p>Dear amazing Zoan family,</p>
+                
+                <p>→ To everyone celebrating today — <strong>Merry Christmas!</strong> 🎅✨<br>
+                May your day be filled with warmth, laughter, and good food.</p>
+                
+                <p>→ To those who don’t celebrate Christmas — happy holidays and season’s greetings! ❄️<br>
+                No matter how you spend this time, we hope it’s full of peace, joy, and people (or pets) you love.</p>
+                
+                <p>→ A heartfelt <strong>thank you</strong> to every single one of you for being part of this server.<br>
+                From the daily grinders to the late-night chatters, the carriers helping new players, and everyone in between — <strong>you</strong> are what makes Zoan feel like home. This year has been incredible because of <em>you</em>.</p>
+                
+                <p>→ The bot will now be going offline for Christmas. We’re taking a short break to recharge, but trust us — we’re already excited for what’s coming in 2026.</p>
+                
+                <p>Rest well, enjoy the holidays, and get ready… the adventure continues soon! 🏴‍☠️</p>
+                
+                <p class="sign-off">With all our love and gratitude,<br>
+                <strong>— The Zoan Team</strong> 🎁❤️</p>
+            </div>
 
-.banner-img {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-}
-
-.pfp-container {
-    margin: -80px auto 40px;
-    width: 160px;
-    height: 160px;
-    position: relative;
-    z-index: 2;
-}
-
-.pfp {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 8px solid #24243e;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
-    object-fit: cover;
-}
-
-.content {
-    background: rgba(20, 20, 40, 0.85);
-    padding: 50px 40px;
-    border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 2.8rem;
-    margin-bottom: 30px;
-    background: linear-gradient(to right, #ff9a9e, #fad0c4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.message p {
-    font-size: 1.15rem;
-    margin: 20px 0;
-    text-align: left;
-}
-
-.message strong {
-    color: #ff6b6b;
-}
-
-.message em {
-    color: #a8e6cf;
-}
-
-.sign-off {
-    margin-top: 40px;
-    font-size: 1.3rem;
-    text-align: right;
-    color: #ff9a9e;
-}
-
-.footer-note {
-    margin-top: 50px;
-    font-size: 1.1rem;
-    color: #b0c4de;
-    font-style: italic;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.2rem;
-    }
-    
-    .content {
-        padding: 40px 25px;
-    }
-    
-    .message p {
-        font-size: 1.05rem;
-        text-align: center;
-    }
-    
-    .sign-off {
-        text-align: center;
-    }
-    
-    .pfp-container {
-        width: 130px;
-        height: 130px;
-    }
-}
+            <div class="footer-note">
+                <p>Happy Holidays from our crew to yours! 🌟</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
