@@ -8,17 +8,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:wght@400;600&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Christmas Music (loop) -->
-    <audio autoplay loop preload="auto">
+    <!-- Silent iframe hack to help unlock audio on some browsers -->
+    <iframe src="sounds/silence.mp3" allow="autoplay" style="display:none"></iframe>
+
+    <!-- Christmas Music (loop) - controlled by button -->
+    <audio id="christmasMusic" loop preload="auto">
         <source src="sounds/music-loop.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
+
+    <!-- Play Music Button (visible until played) -->
+    <div id="musicButtonContainer">
+        <button id="playMusicBtn">🎵 Play Christmas Music</button>
+    </div>
 
     <!-- Twinkling Stars -->
     <div class="stars"></div>
 
     <!-- Snowfall -->
     <div class="snowfall">
+        <!-- (your 20 snowflakes here - same as before) -->
         <div class="snowflake">❅</div><div class="snowflake">❆</div><div class="snowflake">❅</div>
         <div class="snowflake">❆</div><div class="snowflake">❅</div><div class="snowflake">❆</div>
         <div class="snowflake">❅</div><div class="snowflake">❆</div><div class="snowflake">❅</div>
@@ -66,5 +75,24 @@
             </footer>
         </main>
     </div>
+
+    <script>
+        const audio = document.getElementById('christmasMusic');
+        const btnContainer = document.getElementById('musicButtonContainer');
+        const playBtn = document.getElementById('playMusicBtn');
+
+        playBtn.addEventListener('click', () => {
+            audio.play().then(() => {
+                btnContainer.style.display = 'none'; // Hide button after playing
+            }).catch(err => {
+                console.log("Audio play failed:", err);
+            });
+        });
+
+        // Try autoplay on any user interaction (click anywhere)
+        document.body.addEventListener('click', () => {
+            audio.play().catch(() => {}); // Silent fail if blocked
+        }, { once: true });
+    </script>
 </body>
 </html>
