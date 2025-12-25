@@ -275,3 +275,36 @@ h1 {
     background: #c41e3a;
     transform: scale(1.05);
 }
+
+/* 🔓 Interaction Overlay */
+#interactionOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 14, 23, 0.92);
+    backdrop-filter: blur(6px);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 1s ease;
+}
+
+#interactionOverlay.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.overlay-text {
+    font-family: 'Cinzel', serif;
+    font-size: 2.2rem;
+    color: #DC143C;
+    text-align: center;
+    animation: pulseText 2s infinite;
+}
+
+@keyframes pulseText {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
