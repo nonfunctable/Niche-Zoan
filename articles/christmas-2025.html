@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoan • Merry Christmas 2025</title>
+    <link rel="stylesheet" href="../css/christmas.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:wght@400;600&family=Montserrat:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Load Christmas Music -->
+    <audio id="christmasMusic" loop preload="auto">
+        <source src="../sounds/music-loop.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Christmas Lights -->
+    <div class="christmas-lights">
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+    </div>
+
+    <!-- Twinkling Stars -->
+    <div class="stars"></div>
+
+    <!-- Floating Christmas Icons -->
+    <div class="floating-icons">
+        <div class="float-icon">🎄</div>
+        <div class="float-icon">⭐</div>
+        <div class="float-icon">🎁</div>
+        <div class="float-icon">❄️</div>
+        <div class="float-icon">🔔</div>
+        <div class="float-icon">🎅</div>
+    </div>
+
+    <!-- Snowfall (starts off-screen via CSS) -->
+    <div class="snowfall">
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+    </div>
+
+    <!-- Flying Santa -->
+    <div class="santa-fly">🎅</div>
+
+    <div class="container">
+        <a href="../index.html" class="back-link">← Back to News</a>
+        <header class="header fade-in">
+            <img src="../images/ZoanBanner.png" alt="Zoan Banner" class="banner-img">
+            <div class="pfp-container">
+                <img src="../images/ZoanPfp.png" alt="Zoan Profile" class="pfp">
+            </div>
+        </header>
+        <main class="main-content fade-in">
+            <h1>🎄 Merry Christmas from the Zoan Team ❤️</h1>
+
+            <section class="message">
+                <p>Dear amazing Zoan family,</p>
+
+                <p>→ To everyone celebrating today — <strong>Merry Christmas!</strong> 🎅✨<br>
+                    May your day be filled with warmth, laughter, and good food.</p>
+
+                <p>→ To those who don't celebrate Christmas — happy holidays and season's greetings! ❄️<br>
+                    No matter how you spend this time, we hope it's full of peace, joy, and people (or pets) you love.
+                </p>
+
+                <p>→ A heartfelt <strong>thank you</strong> to every single one of you for being part of this
+                    server.<br>
+                    From the daily grinders to the late-night chatters, the carriers helping new players, and everyone
+                    in between — <strong>you</strong> are what makes Zoan feel like home. This year has been incredible
+                    because of <em>you</em>.</p>
+
+                <p>→ We're taking a short break to recharge, but trust us — we're already excited for what's coming in
+                    2026.</p>
+
+                <p>Rest well, enjoy the holidays, and get ready… the adventure continues soon! 🏴‍☠️</p>
+
+                <p class="sign-off">
+                    With all our love and gratitude,<br>
+                    <strong>— The Zoan Team</strong> 🎁❤️
+                </p>
+            </section>
+            <footer class="footer-note fade-in">
+                <p>Happy Holidays from the Zoan team! 🌟</p>
+            </footer>
+        </main>
+    </div>
+
+    <!-- MUSIC -->
+    <script>
+        const audio = document.getElementById("christmasMusic");
+        function startMusic() {
+            audio.volume = 0.6;
+            audio.muted = false;
+            audio.play().catch(() => { });
+            document.removeEventListener("click", startMusic);
+            document.removeEventListener("touchstart", startMusic);
+        }
+        document.addEventListener("click", startMusic, { once: true });
+        document.addEventListener("touchstart", startMusic, { once: true });
+    </script>
+</body>
+
+</html>

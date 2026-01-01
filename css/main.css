@@ -1,0 +1,216 @@
+:root {
+    --bg-color: #0d1117;
+    --card-bg: rgba(22, 27, 34, 0.7);
+    --text-primary: #f0f6fc;
+    --text-secondary: #8b949e;
+    --accent: #58a6ff;
+    --accent-glow: rgba(88, 166, 255, 0.4);
+    --gold: #fbc02d;
+    --red: #ff4757;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image:
+        radial-gradient(circle at 0% 0%, rgba(88, 166, 255, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 100% 100%, rgba(220, 20, 60, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(251, 192, 45, 0.05) 0%, transparent 60%);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 80px;
+    animation: fadeInDown 1s ease-out;
+}
+
+.banner {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    margin-bottom: -60px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo-container {
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 6px solid var(--bg-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background: var(--bg-color);
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    margin-top: 20px;
+    letter-spacing: 4px;
+    background: linear-gradient(to bottom, #fff, #8b949e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    margin-top: -10px;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.article-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+.article-card:hover {
+    transform: translateY(-15px);
+    border-color: var(--accent);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px var(--accent-glow);
+}
+
+.article-card.christmas:hover {
+    border-color: var(--red);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 71, 87, 0.3);
+}
+
+.article-card.newyear:hover {
+    border-color: var(--gold);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(251, 192, 45, 0.3);
+}
+
+.card-image {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+    transition: 0.4s;
+}
+
+.article-card:hover .card-image {
+    filter: brightness(1);
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 30px;
+}
+
+.card-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.tag-holiday {
+    background: rgba(255, 71, 87, 0.2);
+    color: var(--red);
+}
+
+.tag-update {
+    background: rgba(88, 166, 255, 0.2);
+    color: var(--accent);
+}
+
+.tag-event {
+    background: rgba(251, 192, 45, 0.2);
+    color: var(--gold);
+}
+
+.card-content h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.card-content p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.read-more {
+    font-weight: 600;
+    color: var(--accent);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        letter-spacing: 4px;
+        font-size: 0.9rem;
+    }
+
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+}
